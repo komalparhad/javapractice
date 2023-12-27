@@ -1,0 +1,27 @@
+package com.example.SpringJdbcDemo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+@SpringBootApplication
+public class SpringJdbcDemoApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = SpringApplication.run(SpringJdbcDemoApplication.class, args);
+		Alien a= context.getBean(Alien.class);
+	a.getId(11);
+	a.getName("komal");
+	a.getTech("Java");
+	
+	AlianRepo repo=context.getBean(AlianRepo.class);
+	
+	
+	
+	
+	
+	
+	
+	}
+
+}
