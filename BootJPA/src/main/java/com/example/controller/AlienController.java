@@ -27,6 +27,9 @@ public class AlienController {
 
 	}
 
+	
+	
+	
 	@RequestMapping("getAlien")
 	public ModelAndView getAlien(@RequestParam int aid) {
 		ModelAndView mv = new ModelAndView("showAlien.jsp");
