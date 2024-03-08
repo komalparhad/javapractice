@@ -1,5 +1,0 @@
-create table alien(
-id int PRIMARY KEY,
-name varchar(33),
-tech varchar(33)
-);

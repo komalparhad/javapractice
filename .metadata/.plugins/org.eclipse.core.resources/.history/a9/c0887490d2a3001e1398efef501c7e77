@@ -1,5 +1,0 @@
-package com.example.SendDataFromControllerToView;
-
-public class HomeController {
-
-}

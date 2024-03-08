@@ -1,4 +1,0 @@
-server.port:8284
-spring.mvc.view.prefix=/pages/
-spring.mvc.view.suffix=.jsp
-
