@@ -7,16 +7,28 @@ import Alert from "./Components/Alert";
 //import { type } from '@testing-library/user-event/dist/type';
 import { Routes, Route } from "react-router-dom";
 
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("dark"); //whether dark mode is enabled or not
-  const toggleMode = () => {
-    if (mode === "light") {
-      setMode("dark");
-      document.body.style.backgroundColor = "grey";
-      showAlert("Dark mode has been enabled", "success");
-      document.title = "TextUtils -dark mode enable";
+  const removeBodyClasses=()=>
+  {
+    document.body.classList.remove('bg-primary');
+    document.body.classList.remove('bg-success');
+    document.body.classList.remove('bg-danger');
+    document.body.classList.remove('bg-warning');
+    document.body.classList.remove('bg-light');
+    document.body.classList.remove('bg-dark');
+  }
+  const toggleMode = (cls) => {
+    removeBodyClasses();
+    document.body.classList.add('bg-'+cls);
+
+    // if (mode === "light") {
+    //   setMode("dark");
+    //   document.body.style.backgroundColor = "grey";
+    //   showAlert("Dark mode has been enabled", "success");
+    //   document.title = "TextUtils -dark mode enable";
       // setInterval(()=>
       //   {
       //     document.title='TextUtils -is Amazing';
@@ -28,12 +40,12 @@ function App() {
       //     document.title='Install TextUtils now';
 
       //   },1500);
-    } else {
-      setMode("light");
-      document.body.style.backgroundColor = "#042743";
-      showAlert("Light mode has been enabled", "success");
-      document.title = "TextUtils -Light mode enable";
-    }
+    // } else {
+    //   setMode("light");
+    //   document.body.style.backgroundColor = "#042743";
+    //   showAlert("Light mode has been enabled", "success");
+    //   document.title = "TextUtils -Light mode enable";
+    // }
   };
   const [Pmode, LatestMode] = useState("dark");
   const tgMode = () => {
@@ -69,7 +81,7 @@ function App() {
         <Alert alert={alert} />
         <div className="container">
           <Routes>
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<About mode={mode}/> } />
             <Route
               path="/"
               element={

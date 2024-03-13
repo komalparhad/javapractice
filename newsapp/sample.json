@@ -1,0 +1,32 @@
+{
+    "status": "ok",
+    "totalResults": 13410,
+    "articles": [
+    {
+    "source": {
+    "id": "wired",
+    "name": "Wired"
+    },
+    "author": "Joel Khalili",
+    "title": "What’s Behind the Bitcoin Price Surge? Vibes, Mostly",
+    "description": "The price of bitcoin has climbed to a new all-time high. But assigning the cryptocurrency a value is anything but trivial.",
+    "url": "https://www.wired.com/story/bitcoin-price-record-economics/",
+    "urlToImage": "https://media.wired.com/photos/65ef46042ca08b0e59a9682f/191:100/w_1280,c_limit/031124-business-bitcoin-economics.jpg",
+    "publishedAt": "2024-03-12T18:13:56Z",
+    "content": "The latest surge in the price of bitcoin is increasing the clamor around it, says Dal Bianco, drawing in yet more speculators and creating a self-reinforcing cycle. Likewise, when collective confiden… [+2967 chars]"
+    },
+    {
+    "source": {
+    "id": null,
+    "name": "Gizmodo.com"
+    },
+    "author": "Artem Golub and Thomas Germain",
+    "title": "Why Bitcoin Won’t Reach $1,000,000",
+    "description": "Coindesk’s Andy Baehr says Bitcoin is just a normal, bread and butter investment now.",
+    "url": "https://gizmodo.com/why-bitcoin-won-t-reach-1-000-000-1851252185",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/d27f57afb7ac3501d4d69ce6afff190b.jpg",
+    "publishedAt": "2024-02-13T18:15:00Z",
+    "content": "Coindesks Andy Baehr says Bitcoin is just a normal, bread and butter investment now."
+    }
+];
+    

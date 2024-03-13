@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 
-export default function (props)
+export default function TextForm(props)
 {
+    
     const handleUPClick =()=>{
         //console.log("Uppercase was clicked")
         setText(text);
@@ -74,20 +75,20 @@ export default function (props)
  <div className="container" style={{color:props.mode==='light'?'white':'#042743'}}>
     <h1>{props.heading}</h1>
     <div className="mb-3">
-    <textarea className="form-control" value={text} onChange={handleOnCheck} style={{backgroundColor:props.mode==='dark'?'grey':'white',color:props.mode==='dark'?'white':'#042743'}} id="mybox" rows="10"></textarea>
+    <textarea className="form-control" value={text} onChange={handleOnCheck} style={{backgroundColor:props.mode==='dark'?'#13466e':'white',color:props.mode==='dark'?'white':'#042743'}} id="mybox" rows="10"></textarea>
   </div>
-  <button className="btn-primary mx-1" onClick={handleUPClick}>Convert to Uppercase</button>
-  <button className="btn-primary mx-2" onClick={handleDownClick}>Convert to LowerCase</button>
-  <button className="btn-primary mx-2" onClick={ReverseText}>Reverse text</button>
-  <button className="btn-primary mx-2" onClick={RemoveExtraSpaces}> Remove Extra Spaces</button>
-  <button className="btn-primary mx-2" onClick={CopyText}>Copy text</button>
-  <button className="btn-primary mx-2" onClick={Speech}>Speech</button>
-  <button className="btn-primary mx-2" onClick={ClearText}>Clear-Text</button>
+  <button disabled={text.length===0} className="btn-primary mx-1" onClick={handleUPClick} style={{backgroundColor:props.mode==='dark'?'13466e':'bisque'}}>Convert to Uppercase</button>
+  <button disabled={text.length===0} className="btn-primary mx-2" onClick={handleDownClick}>Convert to LowerCase</button>
+  <button disabled={text.length===0} className="btn-primary mx-2" onClick={ReverseText}>Reverse text</button>
+  <button disabled={text.length===0} className="btn-primary mx-2" onClick={RemoveExtraSpaces}> Remove Extra Spaces</button>
+  <button disabled={text.length===0} className="btn-primary mx-2" onClick={CopyText}>Copy text</button>
+  <button disabled={text.length===0} className="btn-primary mx-2" onClick={Speech}>Speech</button>
+  <button disabled={text.length===0} className="btn-primary mx-2" onClick={ClearText}>Clear-Text</button>
   </div>
     <div className="container my-3" style={{color:props.mode==='dark'?'black':'white'}}>
         <h1>Your text Summary</h1>
         <p>{text.split(" ").length-1} words and {text.length-1} character</p>
-        <p>{0.008* text.split(" ").length} Minutes reads</p>
+        <p>{0.008* text.split(".").filter((element)=>{return element.length!==0}).length} Minutes reads</p>
         <p>{text.split(/[".?!"]/).length-1}:No of sentences </p>
         <h2>Preview</h2>
         <p>{text.length>0?text:"Enter text here "}</p>
