@@ -4,6 +4,7 @@
 # dependencies
 my-app/node_modules
 newsapp/node_modules
+backend/node_modules
 
 /.pnp
 .pnp.js
